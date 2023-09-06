@@ -1,0 +1,140 @@
+:root{
+    /* Primary */
+    --LightCyan: hsl(193, 38%, 86%);
+    --NeonGreen: hsl(150, 100%, 66%);
+
+    /* Neutral */
+    --GrayishBlue: hsl(217, 19%, 38%);
+    --DarkGrayishBlue: hsl(217, 19%, 24%);
+    --DarkBlue: hsl(218, 23%, 16%);
+
+    /* Font Size */
+    --HeaderFontSize: 0.5rem;
+    --HeaderMobileFontSize: 0.4rem;
+    --AdviceMobileFontSize: 0.8rem;
+
+    /* Margin and Padding */
+    --Padding: 1.7em;
+    --Margin: 1.7em;
+    --BtnPadding: 0.9em;
+    --AdviceMargin: 1em;
+
+    /* Line Height */
+    --LineHeight: 1.2;
+
+    /* Border Radius */
+    --MainBorderRadius: 15px;
+    --Circle: 50%;
+}
+
+*,*::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 28px;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--DarkBlue);
+}
+
+main{
+    max-width: 500px;
+    height: auto;
+    width: 60%;
+    border-radius: var(--MainBorderRadius);
+    background-color: var(--DarkGrayishBlue);
+    position: relative;
+    padding: var(--Padding);
+    margin-bottom: var(--Margin);
+}
+
+h1,p{
+    text-align: center;
+}
+
+p,.attribution{
+    color: var(--LightCyan);
+}
+
+h1{
+    font-size: var(--HeaderFontSize);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--NeonGreen);
+}
+
+p{
+    margin: var(--AdviceMargin) 0;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+img{
+    width: 100%;
+}
+
+button{
+    border: none;
+    outline: none;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: var(--BtnPadding);
+    border-radius: var(--Circle);
+    background-color: var(--NeonGreen);
+    cursor: pointer;
+}
+
+button, button img{
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    box-shadow: 0 0 20px var(--NeonGreen);
+}
+
+button:active img{
+    transform: scale(0.9);
+}
+
+/* Media Queries */
+@media screen and (min-width: 481px) and (max-width: 769px) {
+    main{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main{
+        width: 90%;
+    }
+
+    p{
+        font-size: var(--AdviceMobileFontSize);
+    }
+}
+
+/* Attribution */
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
